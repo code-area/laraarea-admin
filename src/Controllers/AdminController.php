@@ -254,7 +254,7 @@ class AdminController extends Controller
     {
         $className = $this->getServiceClass();
         if (! class_exists($className)) {
-            $baseClassName = $this->getAdminServiceClass();
+            $baseClassName = $this->getBaseServiceClass();
             throw new \Exception("Please make [$className] or [$baseClassName] class. @TODO CODE");
 //            if (! class_exists($baseClassName)) {
 //                throw new \Exception("Please make [$className] or [$baseClassName] class. @TODO CODE");
