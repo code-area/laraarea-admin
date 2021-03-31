@@ -99,7 +99,7 @@ class AdminModel extends AreaModel
     protected function processSearchDetails($data)
     {
         $details = [
-            'formMethod' => $data['searchDetails']['formMethod'] ?? 'adText',
+            'formMethod' => $data['searchDetails']['formMethod'] ?? 'bsText',
             'operation' => $data['searchDetails']['operation'] ?? 'like',
             'column' => $data['column'],
             'order' => $data['searchDetails']['order'] ?? 1,
@@ -111,7 +111,7 @@ class AdminModel extends AreaModel
         if (!empty($data['searchDetails']['composer'])) {
             $details['composer'] = $data['searchDetails']['composer'];
             $details['items'] = $data['searchDetails']['items'] ?? Str::camel(Str::plural(str_replace('_id', '', $data['column'])));
-            $details['formMethod'] = $data['searchDetails']['formMethod'] ?? 'adSelect';
+            $details['formMethod'] = $data['searchDetails']['formMethod'] ?? 'bsSelect';
             $details['operation'] = $data['searchDetails']['operation'] ?? 'whereIn';
         }
 
