@@ -5,16 +5,12 @@ namespace LaraAreaAdmin\Models;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use LaraAreaModel\AreaModel;
-use Traits\Models\UploadableTrait;
-
 /**
  * Class AdminModel
  * @package LaraAreaAdmin\Models
  */
 class AdminModel extends AreaModel
 {
-    use UploadableTrait;
-
     protected $actions = [
         'edit',
         'show',
